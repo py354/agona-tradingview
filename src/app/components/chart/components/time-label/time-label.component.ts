@@ -30,7 +30,7 @@ export class TimeLabelComponent implements OnInit, OnDestroy {
     // @ts-ignore
     this.interval = setInterval(() => {
       this.tick();
-    }, 20);
+    }, 35);
   }
 
   tick() {

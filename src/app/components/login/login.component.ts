@@ -11,7 +11,9 @@ export class LoginComponent {
   constructor(
     private dialogRef: DialogRef,
     @Inject(DIALOG_DATA) public data: string
-  ) {}
+  ) {
+    dialogRef.afterClosed()
+  }
 
   close() {
     this.dialogRef.close();

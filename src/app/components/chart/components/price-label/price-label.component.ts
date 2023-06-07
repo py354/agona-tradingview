@@ -37,7 +37,7 @@ export class PriceLabelComponent implements OnInit, OnDestroy {
     // @ts-ignore
     this.interval = setInterval(() => {
       this.tick();
-    }, 20);
+    }, 200);
   }
 
   tick() {

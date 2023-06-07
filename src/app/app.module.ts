@@ -18,6 +18,7 @@ import { TradesComponent } from './components/chart/components/trades/trades.com
 import { RatingComponent } from './pages/rating/rating.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -37,11 +38,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RatingComponent,
     LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTableModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

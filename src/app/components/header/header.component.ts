@@ -9,13 +9,15 @@ import {LoginComponent} from "../login/login.component";
 })
 export class HeaderComponent {
   logined = false;
-  constructor(private dialog: DialogService) {}
+  constructor(private dialog: DialogService) {
+    dialog
+  }
 
   openLogin() {
-    const dialogRef = this.dialog.open(LoginComponent, { data: 'John' });
+    const dialogRef = this.dialog.open(LoginComponent, {});
 
     dialogRef.afterClosed().subscribe((data) => {
-      console.log('Dialog closed!', this.dialog);
+      console.log('Dialog closed!', this.dialog, data);
     });
   }
 }

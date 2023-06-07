@@ -46,7 +46,7 @@ export class TradesComponent implements OnInit, OnDestroy {
       minmaxService.send(this.minLabelPrice(), this.maxLabelPrice())
     })
 
-    this.timelinesService.minMaxPrice$.subscribe((xs) => {
+    this.timelinesService.minMaxPrice$.subscribe((xs: number[]) => {
      this.timelines = xs
     })
   }
@@ -120,11 +120,11 @@ export class TradesComponent implements OnInit, OnDestroy {
   }
 
   maxLabelPrice() {
-    return this.maxPrice * 1.001
+    return this.maxPrice + Math.max((this.maxPrice - this.minPrice) * .1, 1)
   }
 
   minLabelPrice() {
-    return this.minPrice * 0.999
+    return this.minPrice - Math.max((this.maxPrice - this.minPrice) * .1, 1)
   }
 
   ngOnDestroy() {
