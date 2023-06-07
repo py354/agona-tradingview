@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="selection">
+    <button class="active">Открытые позиции</button>
+    <button>История сделок</button>
+  </div>
+
+  <table class="positions">
+    <thead>
+    <tr>
+      <td>Время создания</td>
+      <td>Пара</td>
+      <td>Тип</td>
+      <td>Статус</td>
+      <td>Стоимость</td>
+      <td>Количество</td>
+      <td>Take profit</td>
+      <td>Stop loss</td>
+      <td>Закрытие заявки</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td>06.06 10:15</td>
+      <td>BTC/USDT</td>
+      <td style="color: green">Long</td>
+      <td>Открыта заявка</td>
+      <td>{{ 25737.97 | currency}}</td>
+      <td>{{ .13 }}</td>
+      <td>{{ 25737.97 * 1.1 | currency}}</td>
+      <td>{{ 25737.97 * 0.8 | currency}}</td>
+      <td><button class="cancel">Отменить заявку</button></td>
+    </tr>
+    <tr>
+      <td>06.06 10:10</td>
+      <td>BTC/USDT</td>
+      <td style="color: green">Long</td>
+      <td>Исполнено</td>
+      <td>{{ 25733.20 | currency}}</td>
+      <td>{{ .13 }}</td>
+      <td>{{ 25733.20 * 1.3 | currency}}</td>
+      <td>{{ 25733.20 * 0.6 | currency}}</td>
+      <td><button class="sell-market">Продать по маркету</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
